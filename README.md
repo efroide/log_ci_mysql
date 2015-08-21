@@ -1,6 +1,6 @@
 # log_ci_mysql
 
-Bibioteca codeigniter para criação de triggers geradoras de  logs no mysql. 
+Biblioteca codeigniter para criação de triggers geradoras de  logs no mysql. 
 
 Gerar as tabelas de logs e registrar as triggers.
 
