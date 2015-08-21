@@ -4,6 +4,7 @@ Bibioteca codeigniter para criação de triggers geradoras de  logs no mysql.
 
 Gerar as tabelas de logs e registrar as triggers.
 
+```
 class Log extends CI_Controller {
     public function index() {
         $this->load->library('logmysql');
@@ -13,10 +14,11 @@ class Log extends CI_Controller {
             ->create_trigger_registra_logs('tb_alunos');
     }
 }
+```
 
 É preciso informar o código e nome do usuario logado para funcionar corretamente.
 Para isso basta criar a classe MY_Model e incluir a herança todos os models.
-
+```
 class MY_Model extends CI_Model {
     function __construct() {
         parent::__construct();
@@ -24,3 +26,4 @@ class MY_Model extends CI_Model {
         $this->db->query("SET @logado_user_name := 'NOME DO USUARIO'");
     }
 }
+```
